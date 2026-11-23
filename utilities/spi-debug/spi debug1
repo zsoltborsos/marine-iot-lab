@@ -1,0 +1,44 @@
+Oscilloscope:
+
+	Pico - E66118604B803823
+
+# RST_PIN = 21 # white - d15
+# DC_PIN = 20 # green - d19
+# CS_PIN = 17 # orange -d16
+# BUSY_PIN = 22 # purple  -d14
+# MISO = 16 # 
+# MOSI = 19 # blue -d18
+# SCK = 18 # yellow - d17
+
+# BUSY_PIN 	# purple	d14
+# RST_PIN 	# white		d15
+# CS_PIN 	# orange	d16
+# SCK  		# yellow	d17
+# MOSI 		# blue		d18
+# DC_PIN 	# green		d19
+# MISO # 
+
+sigrok-cli -l 2 -d raspberrypi-pico:conn=/dev/ttyACM0:serialcomm=115200/flow=0 --config samplerate=10000 -C D2,D3,D4,D5,D6,D7,D8,D9,D10,D11,D12,D13,D14,D15,D16,D17,D18,D19 --samples 1000000 -o epdspi.sr
+
+sigrok-cli -l 2 -d raspberrypi-pico:conn=/dev/ttyACM0:serialcomm=115200/flow=0 --config samplerate=10000 -C D2,D3,D4,D5,D6,D7,D8,D9,D10,D11,D12,D13,D14,D15,D16,D17,D18,D19 -P spi:wordsize=8:mosi=D18:clk=D17 --samples 1000000
+
+
+--config samplerate=10k  
+-o epdspi.sr
+-C D2,D3,D4,D5,D6,D7,D8,D9,D10,D11,D12,D13,D14,D15,D16,D17,D18,D19
+-P spi:wordsize=8:mosi=d11:clk=d10
+
+baudrate=992063, polarity=1, phase=1, bits=8, sck=10, mosi=11, miso=8
+
+
+
+>>> ssd.init()
+wait_until_ready 0ms   0.0mins
+wait_until_ready 0ms   0.0mins
+Init Done.
+>>> ssd._cs(0)
+>>> ssd._command(b'\x14')
+>>> ssd.wait_until_ready()
+wait_until_ready 0ms   0.0mins
+>>> reg_read(0x14)
+reg_read result: b'\xff'

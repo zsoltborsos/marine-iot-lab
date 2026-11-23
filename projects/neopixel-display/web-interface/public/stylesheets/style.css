@@ -1,0 +1,35 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.field {
+  border-width: 4px;
+  border-color: black;
+  border-style: solid;
+  height: 40px;
+  margin: 1px;
+  font-size: small;
+  color: azure;
+}
+
+.selected {
+  border-color: rgb(13, 155, 44);
+}
+
+.notSelected {
+  background-color: rgb(0, 0, 0);
+}
+
+.colorExample {
+  border-width: 2px;
+  border-color: rgb(0, 0, 0);
+  border-style: solid;
+  height: 50px;
+  margin: 10px;
+  padding: 5px;
+}

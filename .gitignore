@@ -1,0 +1,123 @@
+# .gitignore for Marine IoT Lab
+
+# Internal work documents
+# =======================
+.internal/
+internal/
+_work/
+todo/
+plans/
+notes/
+
+# Project-specific
+# ================
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Thonny
+.thonny/
+
+# MicroPython
+# Don't commit local configuration files
+config_local.py
+wifi_config_local.py
+credentials.py
+
+# Logs
+*.log
+logs/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Documentation builds
+docs/_build/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.bak
+
+# Hardware design files (optional - include if you want to share)
+# Uncomment to exclude:
+# *.brd
+# *.sch
+# *.pcb
+# *.cad
+# *.step
+# *.stp
+
+# Binary files (images can be large)
+# Consider using Git LFS for large images
+# *.png
+# *.jpg
+# *.gif
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Secrets and credentials
+.env
+.env.local
+.env.production
+*.key
+*.pem
+*.crt
+secrets.json
+credentials.json
+
+# Build artifacts
+*.o
+*.a
+*.bin
+*.hex
+*.uf2
+
+# Serial ports (macOS)
+/dev/tty.usbserial*
+/dev/cu.usbserial*
+
+# Notes
+TODO.md
+NOTES.md
+scratch.md

@@ -1,0 +1,23 @@
+Voltage sentinel - PICO with voltage regulator and divider
+
+Voltage regulator components
+
+L7805  - 5V voltage regulator IC
+IN5819 - 1A Schottky diode
+22 uF capacitor - used 0.47uF - data sheet suggests 33 uF
+0.1 uF capacitor
+10uF capacitor
+0.1 uF capacitor
+
+Voltage divider components
+
+9K resistor - 2.2K + 6.8K
+1k resisotr
+Variable resistor - depending on actual values of resistors - need to measure before build
+
+Capacitors - need to recheck these
+
+Used for prototype - on divided side
+10 uF capacitor
+0.1 uF capacitor
+0.01 uF capacitor
